@@ -58,21 +58,21 @@ class ProductsScreen extends StatelessWidget {
                         ),
                         ProcutCardCustome(
                           size: size,
-                          url: 'https://images.vexels.com/media/users/3/142960/isolated/lists/2a97b9b57c54506d94d0e12e57e7106b-zapatillas-rojas.png',
-                          price: '\$78.00',
+                          url: 'https://images.vexels.com/media/users/3/192444/isolated/lists/76dd6ac952f7f610ab3916ee352bd58a-botas-de-goma-de-invierno-planas.png',
+                          price: '\$120.00',
                           name: 'Boots'
                         ),
                         ProcutCardCustome(
                           size: size,
-                          url: 'https://images.vexels.com/media/users/3/142960/isolated/lists/2a97b9b57c54506d94d0e12e57e7106b-zapatillas-rojas.png',
-                          price: '\$78.00',
-                          name: 'Shells'
+                          url: 'https://cdn-icons-png.flaticon.com/256/5113/5113556.png',
+                          price: '\$70.00',
+                          name: 'Briefcase'
                         ),
                         ProcutCardCustome(
                           size: size,
-                          url: 'https://images.vexels.com/media/users/3/142960/isolated/lists/2a97b9b57c54506d94d0e12e57e7106b-zapatillas-rojas.png',
-                          price: '\$78.00',
-                          name: 'Sneakers'
+                          url: 'https://images.vexels.com/media/users/3/131469/isolated/lists/ec9b8445ad5d410d653b9e7ae0f028c2-dibujos-animados-de-medio-pantalon-para-hombre-2.png',
+                          price: '\$59.90',
+                          name: 'Jeans'
                         ),
                       ],
                     )
@@ -86,19 +86,19 @@ class ProductsScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconCustom(icon: Icons.shopping_bag,onPressed: (){
-                      //
+                      goToProducts(context);
                     },),
                     IconCustom(icon: Icons.add_shopping_cart_sharp,onPressed: (){
-                      
+                      goToCategories(context);
                     },),
                     IconCustom(icon: Icons.person,onPressed: (){
-                      
+                      goToSingUp(context);
                     },),
                     IconCustom(icon: Icons.payment,onPressed: (){
-                      
+                      //goToCategories(context);
                     },),
                     IconCustom(icon: Icons.build_outlined,onPressed: (){
-                      
+                      //goToCategories(context);
                     },),
                   ],
                 ),
@@ -148,4 +148,19 @@ class TextUnderlineCustome extends StatelessWidget {
         decorationColor: color
     ),);
   }
+}
+
+
+
+
+void goToProducts(BuildContext context){
+  Navigator.of(context).pushNamed('products');
+}
+
+void goToCategories(BuildContext context){
+  Navigator.of(context).pushNamed('categories');
+}
+
+void goToSingUp(BuildContext context){
+  Navigator.of(context).pushNamed('sign-up');
 }

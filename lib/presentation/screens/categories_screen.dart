@@ -81,16 +81,16 @@ class CategoriesScreen extends StatelessWidget {
                       goToProducts(context);
                     },),
                     IconCustom(icon: Icons.add_shopping_cart_sharp,onPressed: (){
-                      
+                      goToCategories(context);
                     },),
                     IconCustom(icon: Icons.person,onPressed: (){
-                      
+                      goToSingUp(context);
                     },),
                     IconCustom(icon: Icons.payment,onPressed: (){
-                      
+                      //goToCategories(context);
                     },),
                     IconCustom(icon: Icons.build_outlined,onPressed: (){
-                      
+                      //goToCategories(context);
                     },),
                   ],
                 ),
@@ -107,6 +107,13 @@ void goToProducts(BuildContext context){
   Navigator.of(context).pushNamed('products');
 }
 
+void goToCategories(BuildContext context){
+  Navigator.of(context).pushNamed('categories');
+}
+
+void goToSingUp(BuildContext context){
+  Navigator.of(context).pushNamed('sign-up');
+}
 
 
 

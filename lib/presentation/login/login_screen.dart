@@ -127,5 +127,5 @@ class LoginScreen extends StatelessWidget {
 }
 
 void goToCategories(BuildContext context){
-  Navigator.of(context).pushNamed('categories');
+  Navigator.of(context).pushNamed('products');
 }
